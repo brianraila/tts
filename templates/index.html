@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text to speech converter</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<style type="text/css">
+	.center {
+  		position: absolute;
+  		left: 0;
+  		right: 0;
+  		margin: auto;  
+}
+</style>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Text To Speech : )</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+	
+		<div class="form-group">
+			<label for="textbox">Text To Convert</label>
+			<input type="text" class="form-control" id="mytext">
+			<span class="error">This field is required</span>
+		</div>
+
+		<div class="form-group">
+		<button class="btn btn-default" id="buttonX">Convert</button>	
+		</div>
+</div>
+
+<div id="audio-div" style="display:block;" class="container" >
+<audio controls id="myAudio">
+  <!-- <source src="{{ url_for('static', filename='media/said.mp3') }}" type="audio/mpeg">
+Your browser does not support the audio element. -->
+</audio>
+</div>
+
+<script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+</body>
+</html>
